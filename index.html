@@ -22,6 +22,7 @@
             flex-direction: column;
             justify-content: space-between;
             position: relative;
+            overflow: hidden;
         }
         
         /* Main Content Styling */
@@ -67,46 +68,46 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 1), transparent 40%),
-                        radial-gradient(circle at 80% 30%, rgba(234, 234, 234, 0.4), transparent 40%),
-                        radial-gradient(circle at 50% 80%, rgba(230, 239, 255, 0.4), transparent 40%),
-                        radial-gradient(circle at 30% 60%, rgba(255, 255, 107, 0.4), transparent 40%);
+            background: radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 0.6), transparent 40%),
+                        radial-gradient(circle at 80% 30%, rgba(234, 234, 234, 0.3), transparent 40%),
+                        radial-gradient(circle at 50% 80%, rgba(230, 239, 255, 0.3), transparent 40%),
+                        radial-gradient(circle at 30% 60%, rgba(255, 255, 107, 0.3), transparent 40%);
             animation: animateGradient 5s infinite alternate ease-in-out;
-            opacity: 0.3;
+            opacity: 0.5;
             z-index: 1;
         }
         .mesh-gradient::before,
         .mesh-gradient::after {
             content: "";
             position: absolute;
-            width: 200%;
-            height: 200%;
-            top: -50%;
-            left: -50%;
-            background: radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 1), transparent 40%),
-                        radial-gradient(circle at 80% 30%, rgba(234, 234, 234, 0.4), transparent 20%),
-                        radial-gradient(circle at 50% 80%, rgba(230, 239, 255, 0.4), transparent 20%),
-                        radial-gradient(circle at 30% 60%, rgba(255, 255, 107, 0.4), transparent 20%);
+            width: 150%; /* Smaller size to fit mobile viewport */
+            height: 150%;
+            top: -25%;
+            left: -25%;
+            background: radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 0.6), transparent 40%),
+                        radial-gradient(circle at 80% 30%, rgba(234, 234, 234, 0.3), transparent 20%),
+                        radial-gradient(circle at 50% 80%, rgba(230, 239, 255, 0.3), transparent 20%),
+                        radial-gradient(circle at 30% 60%, rgba(255, 255, 107, 0.3), transparent 20%);
             animation: animateGradient1 10s infinite alternate ease-in-out;
         }
         .mesh-gradient::after {
-            background: radial-gradient(circle at 30% 30%, rgba(255, 226, 226, 0.6), transparent 40%),
-                        radial-gradient(circle at 70% 20%, rgba(221, 221, 221, 0.6), transparent 50%),
-                        radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.6), transparent 40%),
-                        radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.6), transparent 70%);
+            background: radial-gradient(circle at 30% 30%, rgba(255, 226, 226, 0.4), transparent 40%),
+                        radial-gradient(circle at 70% 20%, rgba(221, 221, 221, 0.4), transparent 50%),
+                        radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.4), transparent 40%),
+                        radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.4), transparent 70%);
             animation: animateGradient2 12s infinite alternate ease-in-out;
         }
 
         /* Gradient Animations */
         @keyframes animateGradient1 {
             0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(-20%, -20%) scale(1.1); }
-            100% { transform: translate(20%, 20%) scale(1); }
+            50% { transform: translate(-10%, -10%) scale(1.05); }
+            100% { transform: translate(10%, 10%) scale(1); }
         }
         @keyframes animateGradient2 {
             0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(20%, -20%) scale(1.1); }
-            100% { transform: translate(-20%, 20%) scale(1); }
+            50% { transform: translate(10%, -10%) scale(1.05); }
+            100% { transform: translate(-10%, 10%) scale(1); }
         }
 
         /* Responsive Breakpoints */
@@ -167,8 +168,6 @@
     <div class="bottom-links">
         <a href="mailto:domrdavies@gmail.com?subject=Hello,%20Dominic!">Email <span class="material-icons-round">north_east</span></a>
         <a href="https://www.linkedin.com/in/dominic-davies-b52a5356/" target="_blank">LinkedIn <span class="material-icons-round">north_east</span></a>
-       <!-- <a href="path/to/portfolio.pdf" download>Portfolio • 200mb <span class="material-icons-round">south</span></a> -->
-    </div>
-
+        <!-- <a href="path/to/portfolio.pdf" download>Portfolio • 200mb <span class="material-icons-round">south</span></a> -->    </div>
 </body>
 </html>
