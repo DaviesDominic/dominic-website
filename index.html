@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round:wght@500&display=swap" rel="stylesheet">
 
     <style>
-        /* General Styling */
+        /* Base Styling */
         body {
             font-family: 'Work Sans', sans-serif;
             color: #000;
             margin: 0;
             padding: 48px;
             box-sizing: border-box;
-            height: 100vh;
+            min-height: 100%; /* Allow content to scale correctly */
             overflow: hidden;
             position: relative;
             font-size: 18px;
@@ -36,9 +36,7 @@
 
         /* Bottom Links Styling */
         .bottom-links {
-            position: absolute;
-            bottom: 48px;
-            right: 48px;
+            margin-top: auto;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -111,7 +109,6 @@
             100% { transform: translate(-20%, 20%) scale(1); }
         }
 
-
         /* Responsive Breakpoints */
 
         /* Mobile */
@@ -121,8 +118,7 @@
                 font-size: 22px;
             }
             .bottom-links {
-                bottom: 32px;
-                right: 32px;
+                align-items: center; /* Center-align links on mobile for easier access */
             }
         }
 
@@ -133,8 +129,7 @@
                 font-size: 18px;
             }
             .bottom-links {
-                bottom: 48px;
-                right: 48px;
+                align-items: flex-end;
             }
         }
 
@@ -145,8 +140,7 @@
                 font-size: 18px;
             }
             .bottom-links {
-                bottom: 72px;
-                right: 72px;
+                align-items: flex-end;
             }
         }
 
@@ -168,7 +162,7 @@
     <div class="bottom-links">
         <a href="mailto:domrdavies@gmail.com?subject=Hello,%20Dominic!">Email <span class="material-icons-round">north_east</span></a>
         <a href="https://www.linkedin.com/in/dominic-davies-b52a5356/" target="_blank">LinkedIn <span class="material-icons-round">north_east</span></a>
-        <a href="path/to/portfolio.pdf" download>Portfolio • 381mb <span class="material-icons-round">south</span></a>
+       <!-- <a href="path/to/portfolio.pdf" download>Portfolio • 200mb <span class="material-icons-round">south</span></a> -->
     </div>
 
 </body>
