@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominic Davies - Digital Product Designer</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: #000;
+            margin: 0;
+            padding: 48px;
+            box-sizing: border-box;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        /* Main Content Styling */
+        .main-content {
+            z-index: 2;
+        }
+        .main-content p {
+            margin: 0 0 5px;
+        }
+
+        /* Bottom Links Styling */
+        .bottom-links {
+            position: absolute;
+            bottom: 48px;
+            right: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+            z-index: 2;
+        }
+        .bottom-links a {
+            text-decoration: none;
+            color: #000;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        .bottom-links a:hover {
+            color: #007BFF;
+        }
+        .material-icons-round {
+            font-size: 17px;
+            margin-left: 4px;
+            font-weight: 500;
+        }
+
+        /* Mesh Gradient Background */
+        .mesh-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 1), transparent 40%),
+                        radial-gradient(circle at 80% 30%, rgba(234, 234, 234, 0.4), transparent 40%),
+                        radial-gradient(circle at 50% 80%, rgba(230, 239, 255, 0.4), transparent 40%),
+                        radial-gradient(circle at 30% 60%, rgba(255, 255, 107, 0.4), transparent 40%);
+            animation: animateGradient 5s infinite alternate ease-in-out;
+            opacity: 0.4;
+            z-index: 1;
+        }
+        .mesh-gradient::before,
+        .mesh-gradient::after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 1), transparent 40%),
+                        radial-gradient(circle at 80% 30%, rgba(234, 234, 234, 0.4), transparent 20%),
+                        radial-gradient(circle at 50% 80%, rgba(230, 239, 255, 0.4), transparent 20%),
+                        radial-gradient(circle at 30% 60%, rgba(255, 255, 107, 0.4), transparent 20%);
+            animation: animateGradient1 10s infinite alternate ease-in-out;
+        }
+        .mesh-gradient::after {
+            background: radial-gradient(circle at 30% 30%, rgba(255, 226, 226, 0.6), transparent 40%),
+                        radial-gradient(circle at 70% 20%, rgba(221, 221, 221, 0.6), transparent 50%),
+                        radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.6), transparent 40%),
+                        radial-gradient(circle at 40% 60%, rgba(255, 255, 255, 0.6), transparent 70%);
+            animation: animateGradient2 12s infinite alternate ease-in-out;
+        }
+
+        /* Gradient Animations */
+        @keyframes animateGradient1 {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-20%, -20%) scale(1.1); }
+            100% { transform: translate(20%, 20%) scale(1); }
+        }
+        @keyframes animateGradient2 {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(20%, -20%) scale(1.1); }
+            100% { transform: translate(-20%, 20%) scale(1); }
+        }
+
+
+        /* Responsive Breakpoints */
+
+        /* Mobile */
+        @media (max-width: 767px) {
+            body {
+                padding: 32px;
+                font-size: 22px;
+            }
+            .bottom-links {
+                bottom: 32px;
+                right: 32px;
+            }
+        }
+
+        /* iPad/Tablet */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            body {
+                padding: 48px;
+                font-size: 18px;
+            }
+            .bottom-links {
+                bottom: 48px;
+                right: 48px;
+            }
+        }
+
+        /* Larger Desktops */
+        @media (min-width: 1560px) {
+            body {
+                padding: 72px;
+                font-size: 18px;
+            }
+            .bottom-links {
+                bottom: 72px;
+                right: 72px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Animated Mesh Gradient Background -->
+    <div class="mesh-gradient"></div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <p>Dominic Davies</p>
+        <p>Digital Product Designer</p>
+        <p>Apple</p>
+    </div>
+
+    <!-- Bottom Links -->
+    <div class="bottom-links">
+        <a href="mailto:domrdavies@gmail.com?subject=Hello,%20Dominic!">Email <span class="material-icons-round">north_east</span></a>
+        <a href="https://www.linkedin.com/in/dominic-davies-b52a5356/" target="_blank">LinkedIn <span class="material-icons-round">north_east</span></a>
+        <a href="path/to/portfolio.pdf" download>Portfolio • 381mb <span class="material-icons-round">south</span></a>
+    </div>
+
+</body>
+</html>
