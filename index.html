@@ -10,20 +10,18 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round:wght@500&display=swap" rel="stylesheet">
 
     <style>
-        /* General Styling */
+        /* Base Styling */
         body {
             font-family: 'Work Sans', sans-serif;
             color: #000;
             margin: 0;
             padding: 48px;
             box-sizing: border-box;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
-            font-size: 18px;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            position: relative;
         }
         
         /* Main Content Styling */
@@ -74,7 +72,7 @@
                         radial-gradient(circle at 50% 80%, rgba(230, 239, 255, 0.4), transparent 40%),
                         radial-gradient(circle at 30% 60%, rgba(255, 255, 107, 0.4), transparent 40%);
             animation: animateGradient 5s infinite alternate ease-in-out;
-            opacity: 0.4;
+            opacity: 0.3;
             z-index: 1;
         }
         .mesh-gradient::before,
@@ -111,7 +109,6 @@
             100% { transform: translate(-20%, 20%) scale(1); }
         }
 
-
         /* Responsive Breakpoints */
 
         /* Mobile */
@@ -121,8 +118,9 @@
                 font-size: 22px;
             }
             .bottom-links {
-                bottom: 32px;
-                right: 32px;
+                bottom: 24px;
+                right: 24px;
+                align-items: right;
             }
         }
 
@@ -135,6 +133,7 @@
             .bottom-links {
                 bottom: 48px;
                 right: 48px;
+                align-items: flex-end;
             }
         }
 
@@ -168,7 +167,7 @@
     <div class="bottom-links">
         <a href="mailto:domrdavies@gmail.com?subject=Hello,%20Dominic!">Email <span class="material-icons-round">north_east</span></a>
         <a href="https://www.linkedin.com/in/dominic-davies-b52a5356/" target="_blank">LinkedIn <span class="material-icons-round">north_east</span></a>
-        <a href="path/to/portfolio.pdf" download>Portfolio • 381mb <span class="material-icons-round">south</span></a>
+       <!-- <a href="path/to/portfolio.pdf" download>Portfolio • 200mb <span class="material-icons-round">south</span></a> -->
     </div>
 
 </body>
