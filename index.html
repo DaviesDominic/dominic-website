@@ -11,18 +11,25 @@
 
     <style>
         /* Base Styling */
+        html, body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
         body {
             font-family: 'Work Sans', sans-serif;
             color: #000;
-            margin: 0;
-            padding: 48px;
-            box-sizing: border-box;
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: flex-start;
+            padding: 48px;
+            box-sizing: border-box;
+            overflow-y: hidden; /* Prevent vertical scrolling */
             position: relative;
-            overflow: hidden;
+            height: 100vh; /* Ensure full viewport height without overflow */
         }
         
         /* Main Content Styling */
@@ -80,7 +87,7 @@
         .mesh-gradient::after {
             content: "";
             position: absolute;
-            width: 150%; /* Smaller size to fit mobile viewport */
+            width: 150%; /* Adjust size to fit mobile viewport */
             height: 150%;
             top: -25%;
             left: -25%;
@@ -117,11 +124,12 @@
             body {
                 padding: 32px;
                 font-size: 22px;
+                overflow-y: hidden;
             }
             .bottom-links {
                 bottom: 24px;
                 right: 24px;
-                align-items: right;
+                align-items: flex-end;
             }
         }
 
@@ -168,6 +176,7 @@
     <div class="bottom-links">
         <a href="mailto:domrdavies@gmail.com?subject=Hello,%20Dominic!">Email <span class="material-icons-round">north_east</span></a>
         <a href="https://www.linkedin.com/in/dominic-davies-b52a5356/" target="_blank">LinkedIn <span class="material-icons-round">north_east</span></a>
-        <!-- <a href="path/to/portfolio.pdf" download>Portfolio • 200mb <span class="material-icons-round">south</span></a> -->    </div>
+        <!-- <a href="path/to/portfolio.pdf" download>Portfolio • 200mb <span class="material-icons-round">south</span></a> -->    
+    </div>
 </body>
 </html>
