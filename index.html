@@ -15,7 +15,8 @@
         html, body {
             padding: 0;
             margin: 0;
-            height: 100%;
+            height: 100vh;  /* standard definition (as fallback) */
+    		height: 100dvh; /* dynamic vh will make the trick on iOS */
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
@@ -31,7 +32,6 @@
             box-sizing: border-box;
             overflow-y: hidden; /* Prevent vertical scrolling */
             position: relative;
-            height: 100vh; /* Ensure full viewport height without overflow */
         }
         
         /* Main Content Styling */
